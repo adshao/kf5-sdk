@@ -64,8 +64,8 @@ class Client(object):
                 req = urllib2.Request(api_url, urllib.urlencode(params))
                 res = urllib2.urlopen(req)
                 result = json.loads(res.read())
-                if getattr(result, 'err', 0) == 1:
-                    raise APIError('API Error', result['msg'])
+                if result.get('err', 0) == 1:
+                    raise APIError('API Error', result.get('msg', ''))
                 return result
             except Exception as e:
                 raise APIError('Error', e.message)
