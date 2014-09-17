@@ -4,7 +4,10 @@
 
 ## Python SDK
 
+Single Python file without any dependences on other modules
+
 Usage:
+
 ```python
 from kf5client import Client, APIError
 

@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+__author__ = 'Guojian Shao'
+__email__ = 'guojian@unitedstack.com; tjusgj@gmail.com'
+
 import urllib
 import urllib2
 import hashlib
@@ -77,3 +80,4 @@ class APIError(Exception):
 
     def __str__(self):
         return json.dumps(dict(error=self.error, message=self.message))
+
